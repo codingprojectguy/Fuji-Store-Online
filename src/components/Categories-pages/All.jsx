@@ -5,7 +5,6 @@ import Newsletter from "../Newsletter";
 function All() {
   return (
     <>
-      <CategoriesItem />
       <Newsletter />
       <Footer />
     </>

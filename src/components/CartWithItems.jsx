@@ -1,34 +1,39 @@
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../pages/ProductPage";
 import EmptyCart from "./EmptyCart";
 
 function CartWithItems() {
   const { cartItem, setCartItem } = useContext(CartContext);
 
-  const totalPrice = cartItem.reduce((acc, item) => acc + item.price, 0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const newTotalPrice = cartItem.reduce((acc, item) => acc + item.price, 0);
+    setTotalPrice(newTotalPrice);
+  }, [cartItem]);
 
   return (
     <>
       <div className="full-cart-div">
         <div className="full-cart">
-          {cartItem.length !== 0 ? (
-            cartItem.map((item, id) => (
+          {cartItem.map((item, id) =>
+            cartItem.length !== 0 ? (
               <CartItem key={id} item={item} setCartItem={setCartItem} />
-            ))
-          ) : (
-            <EmptyCart />
+            ) : (
+              <EmptyCart key={id} />
+            )
           )}
         </div>
       </div>
       <div className="subtotal-div">
         <div className="sub-right">
           <p>Subtotal</p>
-          <p className="total-price">{totalPrice.toFixed(2)}$</p>
+          <p className="total-price">{totalPrice + ".00$"}</p>
         </div>
         <div className="sub-left">
-          <Link to="/checkout">Go to Checkout</Link>
+          <Link>Go to Checkout</Link>
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Banner.css";
 
-const Banner = ({ title, text, img }) => {
+function Banner({ title, text, img }) {
   return (
     <div className="banner">
       <div className="container">
@@ -22,6 +22,6 @@ const Banner = ({ title, text, img }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Banner;

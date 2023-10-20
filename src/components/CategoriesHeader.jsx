@@ -2,7 +2,7 @@ import { IconChevronLeft } from "@tabler/icons-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const CategoriesHeader = () => {
+function CategoriesHeader() {
   const [btnName, setBtnName] = useState("All");
 
   const handleBtnName = (e) => {
@@ -23,11 +23,15 @@ const CategoriesHeader = () => {
             <Link to="all" onClick={() => handleBtnName("all")}>
               <button>All</button>
             </Link>
-            <Link to="furnitures" onClick={() => handleBtnName("furnitures")}>
-              <button>furnitures</button>
+            <Link to="furnitures">
+              <button onClick={() => handleBtnName("furnitures")}>
+                Furnitures
+              </button>
             </Link>
-            <Link to="electronics" onClick={() => handleBtnName("electronics")}>
-              <button>electronics</button>
+            <Link to="electronics">
+              <button onClick={() => handleBtnName("electronics")}>
+                Electronics
+              </button>
             </Link>
             <Link to="lamps">
               <button onClick={() => handleBtnName("lamps")}>Lamps</button>
@@ -48,6 +52,6 @@ const CategoriesHeader = () => {
       </div>
     </>
   );
-};
+}
 
 export default CategoriesHeader;
