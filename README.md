@@ -1,8 +1,14 @@
-# React + Vite
+<h2>About the Fuji Store Online Project</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>This is a e-commerce website built with React and CSS. This
+website features a modern and intuitive design, with easy-to-use navigation and a
+simple shopping experience that puts the focus on the products.</p>
 
-Currently, two official plugins are available:
+<p>Credits for the design goes to <a href='https://github.com/Abderraouf-Rahmani'>Abderraouf</a></p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 Live Demo: <a href='https://lucent-pothos-3e8bbb.netlify.app/'>Ecommerce Demo</a>
+
+<h3>Build with:</h3>
+
+» Vanilla CSS <br>
+» React + Vite
